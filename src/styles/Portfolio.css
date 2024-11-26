@@ -1,9 +1,58 @@
 .portfolio {
   min-height: 100vh;
   transition: background-color 0.5s ease, color 0.5s ease;
-  padding-top: 80px;
 }
 
 .content {
-  padding: 20px;
+  padding-top: 80px;
+}
+
+.intro-section,
+.project-section {
+  padding: 40px;
+  width: 100%;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.intro-section {
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.5s ease;
+}
+
+.intro-section h2,
+.intro-section p {
+  transition: none;
+}
+
+.bg-color-1 {
+  background-color: #cbb6a1;
+}
+
+.bg-color-2 {
+  background-color: #d3c1af;
+}
+
+.bg-color-3 {
+  background-color: #f9afae;
+}
+
+.dark-mode .bg-color-1 {
+  background-color: #34495E;
+}
+
+.dark-mode .bg-color-2 {
+  background-color: #2C3E50;
+}
+
+.dark-mode .bg-color-3 {
+  background-color: #065051;
+}
+
+.project-section {
+  color: black;
+}
+
+.dark-mode .project-section {
+  color: white;
 }

@@ -13,8 +13,22 @@ function Portfolio({ isDarkMode, toggleDarkMode }) {
     >
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <main className="content">
-        <h2>Mon Portfolio</h2>
-        <p>Voici quelques-uns de mes projets.</p>
+        <section className="intro-section">
+          <h2>Bienvenue sur mon portfolio!</h2>
+          <p>ceci est un texte placeholder le temps de finir le site</p>
+        </section>
+        <section className="project-section bg-color-1">
+          <h3>Projet 1</h3>
+          <p>ceci est un texte placeholder le temps de finir le site</p>
+        </section>
+        <section className="project-section bg-color-2">
+          <h3>Projet 2</h3>
+          <p>ceci est un texte placeholder le temps de finir le site</p>
+        </section>
+        <section className="project-section bg-color-3">
+          <h3>Projet 3</h3>
+          <p>ceci est un texte placeholder le temps de finir le site</p>
+        </section>
       </main>
     </motion.div>
   );

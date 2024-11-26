@@ -17,3 +17,26 @@ body {
   background-color: #ffffff;
   color: black;
 }
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body, div, section, header {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
