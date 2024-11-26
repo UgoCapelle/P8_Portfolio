@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: black;
+}

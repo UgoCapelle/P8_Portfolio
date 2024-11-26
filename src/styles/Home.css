@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.open-portfolio {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  color: inherit;
+}
+
+.open-portfolio:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toggle-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

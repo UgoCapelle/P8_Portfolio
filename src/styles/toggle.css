@@ -1,0 +1,38 @@
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+.toggle {
+  width: 60px;
+  height: 30px;
+  background-color: grey;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle.active {
+  background-color: #4caf50;
+}
+
+.slider {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: left 0.3s ease;
+}
+
+.toggle.active .slider {
+  left: 32.5px;
+}
