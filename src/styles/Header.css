@@ -39,4 +39,30 @@
 .title-link:hover .title {
   opacity: 0.7;
 }
-  
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.github-link-header {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.github-link-header img {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.github-link-header:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
