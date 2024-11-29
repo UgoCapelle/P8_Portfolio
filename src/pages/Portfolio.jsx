@@ -19,7 +19,7 @@ function Portfolio({ isDarkMode, toggleDarkMode }) {
       <main className="content">
         <section className="intro-section">
           <h2>Bienvenue sur mon portfolio !</h2>
-          <p>Jeune développeur web en fin de formation, j'ai décidé de me lancer dans l'auto-entreprenariat par motivation de la passion pour la création.</p>
+          <p>Jeune développeur web en fin de formation OpenClassrooms, j'ai décidé de me lancer dans l'auto-entreprenariat par motivation de la passion pour la création.</p>
         </section>
         <section className="project-section bg-color-1">
           <h2>Projet 1 : Créer une application web de location immobilière avec React</h2>
@@ -31,6 +31,10 @@ function Portfolio({ isDarkMode, toggleDarkMode }) {
             d'images pour chaque annonce. C'étaient mes premiers pas avec React
             et ça m'a conforté dans mon choix de m'orienter vers le front-end
             plus que le back-end pour l'aspect plus créatif du monde du devweb.
+          </p>
+          <p>
+            Problématique rencontrée :
+            La gestion du routage et de l'état dans une application React a été un défi au début, mais j'ai surmonté cela en utilisant React Router pour organiser la navigation et en apprenant à gérer efficacement l'état avec useState et useEffect.
           </p>
           <p>
             Tout au long de ce projet, j'ai donc appris React, l'utilisation de
@@ -59,7 +63,7 @@ function Portfolio({ isDarkMode, toggleDarkMode }) {
             className="project-link-button"
             onClick={() => window.open('https://ugocapelle.github.io/P5_React_OC/', '_blank', 'noopener,noreferrer')}
           >
-            Lien vers la Github Page
+            Lien vers le Github Page
           </button>
         </section>
         <section className="project-section bg-color-2">
@@ -85,7 +89,7 @@ function Portfolio({ isDarkMode, toggleDarkMode }) {
             className="project-link-button"
             onClick={() => window.open('https://ugocapelle.github.io/P4.OC.Nina.Carducci/', '_blank', 'noopener,noreferrer')}
           >
-            Lien vers la Github Page
+            Lien vers le Github Page
           </button>
         </section>
         <section className="project-section bg-color-3">

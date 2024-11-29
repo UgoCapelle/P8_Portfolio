@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "../styles/Footer.css";
 
 function Footer({ isDarkMode }) {
@@ -21,9 +22,29 @@ function Footer({ isDarkMode }) {
     }
 
     setError("");
-    alert("Formulaire envoyé !");
-    setEmail("");
-    setMessage("");
+
+    const templateParams = {
+      from_email: email,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        "service_aqlb7ro",
+        "template_ud3ycaq",
+        templateParams,
+        "SXEn56lk8YRwliC-0"
+      )
+      .then(
+        (result) => {
+          alert("Message envoyé avec succès !");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          setError("Une erreur est survenue lors de l'envoi de l'email.");
+        }
+      );
   };
 
   return (

@@ -36,3 +36,26 @@
 .toggle.active .slider {
   left: 32.5px;
 }
+
+@media (max-width: 400px) {
+  .icon {
+    font-size: 1rem;   /* Taille encore plus petite pour les icônes */
+    margin: 0 3px;     /* Réduit l'espacement entre les icônes */
+  }
+
+  .toggle {
+    width: 40px;       /* Réduit encore la largeur du toggle */
+    height: 20px;      /* Réduit encore la hauteur du toggle */
+  }
+
+  .slider {
+    width: 15px;       /* Réduit la taille du slider */
+    height: 15px;      /* Réduit la taille du slider */
+    top: 2.5px;        /* Garde la position du slider centré */
+    left: 2.5px;       /* Ajuste la position du slider */
+  }
+
+  .toggle.active .slider {
+    left: 22.5px;      /* Ajuste la position du slider dans l'état actif */
+  }
+}
