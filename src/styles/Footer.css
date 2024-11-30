@@ -70,7 +70,7 @@
     padding: 10px;
     border-radius: 5px;
     border: none;
-    background: #007bff;
+    background: #003975;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -78,10 +78,10 @@
   }
   
   .form-button:hover {
-    background: #0056b3;
+    background: #003975;
   }
   
   .form-button:active {
-    background: #004494;
+    background: #003975;
   }
   

@@ -2,16 +2,28 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import SkillCard from "../components/SkillCard";
+import ImageCarousel from "../components/ImageCarousel";
 import "../styles/Portfolio.css";
 
 import htmlLogo from "../assets/HTMLLOGO.png";
 import cssLogo from "../assets/CSSLOGO.png";
 import reactLogo from "../assets/REACTLOGO.png";
 
+import kasa1 from "../assets/Kasa1.png";
+import kasa2 from "../assets/Kasa2.png";
+import kasa3 from "../assets/Kasa3.png";
+
+import Nina1 from "../assets/Nina1.png";
+import Nina2 from "../assets/Nina2.png";
+import Nina3 from "../assets/Nina3.png";
+
 function Portfolio({ isDarkMode, toggleDarkMode }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const kasaImages = [kasa1, kasa2, kasa3];
+  const ninaImages = [Nina1, Nina2, Nina3];
 
   return (
     <motion.div
@@ -28,74 +40,98 @@ function Portfolio({ isDarkMode, toggleDarkMode }) {
         </section>
         <section className="project-section bg-color-1">
           <h2>Projet 1 : Créer une application web de location immobilière avec React</h2>
-          <p>
-            Ce projet consistait à développer une application Web moderne pour
-            un site de location immobilière en utilisant React. L'application
-            permet aux utilisateurs de parcourir des annonces immobilières,
-            d'afficher les détails des propriétés et d'explorer une galerie
-            d'images pour chaque annonce. C'étaient mes premiers pas avec React
-            et ça m'a conforté dans mon choix de m'orienter vers le front-end
-            plus que le back-end pour l'aspect plus créatif du monde du devweb.
-          </p>
-          <p>
-            Problématique rencontrée :
-            La gestion du routage et de l'état dans une application React a été un défi au début, mais j'ai surmonté cela en utilisant React Router pour organiser la navigation et en apprenant à gérer efficacement l'état avec useState et useEffect.
-          </p>
-          <p>
-            Tout au long de ce projet, j'ai donc appris React, l'utilisation de
-            bibliothèques telles que React Router pour mettre en place le
-            routing. J'ai aussi utilisé des props et géré le state, notamment
-            pour l'animation des collapse.
-          </p>
-          <p>
-            Pour faire simple, je suis vite devenu passionné de React et j'ai
-            hâte de prendre de l'expérience pour apporter des touches uniques
-            dans chaque travaux en utilisant React à son plein potentiel.
-          </p>
-          <h3>Compétences développées :</h3>
-          <ul>
-            <li>Maîtrise de React pour le développement front-end.</li>
-            <li>Mise en œuvre du routage avec React Router.</li>
-            <li>
-              Gestion de l'état et des props pour des composants réutilisables.
-            </li>
-            <li>
-              Application des principes d'UX/UI pour une expérience utilisateur
-              fluide.
-            </li>
-          </ul>
-          <button 
-            className="project-link-button"
-            onClick={() => window.open('https://ugocapelle.github.io/P5_React_OC/', '_blank', 'noopener,noreferrer')}
-          >
-            Lien vers le Github Page
-          </button>
+          <div className="project-content">
+            <div className="project-text-container">
+              <div className="project-text">
+                <p>
+                  Ce projet consistait à développer une application Web moderne pour
+                  un site de location immobilière en utilisant React. L'application
+                  permet aux utilisateurs de parcourir des annonces immobilières,
+                  d'afficher les détails des propriétés et d'explorer une galerie
+                  d'images pour chaque annonce. C'étaient mes premiers pas avec React
+                  et ça m'a conforté dans mon choix de m'orienter vers le front-end
+                  plus que le back-end pour l'aspect plus créatif du monde du devweb.
+                </p>
+                <p>
+                  Problématique rencontrée :
+                  La gestion du routage et de l'état dans une application React a été un défi au début, mais j'ai surmonté cela en utilisant React Router pour organiser la navigation et en apprenant à gérer efficacement l'état avec useState et useEffect.
+                </p>
+                <p>
+                  Tout au long de ce projet, j'ai donc appris React, l'utilisation de
+                  bibliothèques telles que React Router pour mettre en place le
+                  routing. J'ai aussi utilisé des props et géré le state, notamment
+                  pour l'animation des collapse.
+                </p>
+                <p>
+                  Pour faire simple, je suis vite devenu passionné de React et j'ai
+                  hâte de prendre de l'expérience pour apporter des touches uniques
+                  dans chaque travaux en utilisant React à son plein potentiel.
+                </p>
+                <h3>Compétences développées :</h3>
+                <ul>
+                  <li>Maîtrise de React pour le développement front-end.</li>
+                  <li>Mise en œuvre du routage avec React Router.</li>
+                  <li>
+                    Gestion de l'état et des props pour des composants réutilisables.
+                  </li>
+                  <li>
+                    Application des principes d'UX/UI pour une expérience utilisateur
+                    fluide.
+                  </li>
+                </ul>
+                <button 
+                  className="project-link-button"
+                  onClick={() => window.open('https://ugocapelle.github.io/P5_React_OC/', '_blank', 'noopener,noreferrer')}
+                >
+                  Lien vers le Github Page
+                </button>
+              </div>
+              <div className="project-mobile-carousel">
+                <ImageCarousel images={kasaImages} />
+              </div>
+            </div>
+            <div className="project-desktop-carousel">
+              <ImageCarousel images={kasaImages} />
+            </div>
+          </div>
         </section>
         <section className="project-section bg-color-2">
           <h2>Projet 2 : Débugger et optimiser un site de photographe</h2>
-          <p>
-            Dans ce projet, mon objectif principal était de débuguer et d'optimiser un site de photographe pour améliorer à la fois ses performances, son expérience utilisateur ainsi que de corriger le CEO. Le site présentait plusieurs problèmes de performance, notamment un temps de chargement élevé dû à la mauvaise gestion des images et des fichiers lourds. J'ai utilisé des outils d'Audit comme LightHouse pour identifier les problèmes et effectuer des corrections comme la compression des images et le lazy loading.
-          </p>
-          <p>
-            L'un des plus grands défis a été de réduire le temps de chargement du site, en particulier en ce qui concerne la gestion des images. Après avoir identifié que les images étaient mal optimisées, j'ai mis en œuvre des solutions comme la compression d'images et l'ajout du lazy loading pour que les images ne se chargent que lorsqu'elles sont visibles à l'écran.
-          </p>
-          <p>
-            J'ai également travaillé sur le référencement naturel (SEO) du site pour le rendre plus visible sur les moteurs de recherche et ainsi attirer plus de trafic. Cela a impliqué des ajustements techniques comme l'optimisation des balises meta, la correction des liens brisés et la réécriture de certaines URL.
-          </p>
-          <h3>Compétences développées :</h3>
-          <ul>
-            <li>Optimisation des performances d'un site web, notamment par la compression d'images et l'implémentation du lazy loading.</li>
-            <li>Utilisation d'outils d'audit comme LightHouse pour identifier les problèmes de performance et de SEO.</li>
-            <li>Amélioration du référencement naturel (SEO) en optimisant les balises meta et la structure des URL.</li>
-            <li>Correction des problèmes d'accessibilité pour garantir une meilleure expérience utilisateur.</li>
-            <li>Gestion des fichiers lourds et mise en œuvre de bonnes pratiques pour une gestion efficace des ressources.</li>
-          </ul>
-          <button 
-            className="project-link-button"
-            onClick={() => window.open('https://ugocapelle.github.io/P4.OC.Nina.Carducci/', '_blank', 'noopener,noreferrer')}
-          >
-            Lien vers le Github Page
-          </button>
+          <div className="project-content">
+            <div className="project-text-container">
+              <div className="project-text">
+                <p>
+                  Dans ce projet, mon objectif principal était de débuguer et d'optimiser un site de photographe pour améliorer à la fois ses performances, son expérience utilisateur ainsi que de corriger le CEO. Le site présentait plusieurs problèmes de performance, notamment un temps de chargement élevé dû à la mauvaise gestion des images et des fichiers lourds. J'ai utilisé des outils d'Audit comme LightHouse pour identifier les problèmes et effectuer des corrections comme la compression des images et le lazy loading.
+                </p>
+                <p>
+                  L'un des plus grands défis a été de réduire le temps de chargement du site, en particulier en ce qui concerne la gestion des images. Après avoir identifié que les images étaient mal optimisées, j'ai mis en œuvre des solutions comme la compression d'images et l'ajout du lazy loading pour que les images ne se chargent que lorsqu'elles sont visibles à l'écran.
+                </p>
+                <p>
+                  J'ai également travaillé sur le référencement naturel (SEO) du site pour le rendre plus visible sur les moteurs de recherche et ainsi attirer plus de trafic. Cela a impliqué des ajustements techniques comme l'optimisation des balises meta, la correction des liens brisés et la réécriture de certaines URL.
+                </p>
+                <h3>Compétences développées :</h3>
+                <ul>
+                  <li>Optimisation des performances d'un site web, notamment par la compression d'images et l'implémentation du lazy loading.</li>
+                  <li>Utilisation d'outils d'audit comme LightHouse pour identifier les problèmes de performance et de SEO.</li>
+                  <li>Amélioration du référencement naturel (SEO) en optimisant les balises meta et la structure des URL.</li>
+                  <li>Correction des problèmes d'accessibilité pour garantir une meilleure expérience utilisateur.</li>
+                  <li>Gestion des fichiers lourds et mise en œuvre de bonnes pratiques pour une gestion efficace des ressources.</li>
+                </ul>
+                <button 
+                  className="project-link-button"
+                  onClick={() => window.open('https://ugocapelle.github.io/P4.OC.Nina.Carducci/', '_blank', 'noopener,noreferrer')}
+                >
+                  Lien vers le Github Page
+                </button>
+              </div>
+              <div className="project-mobile-carousel">
+                <ImageCarousel images={ninaImages} />
+              </div>
+            </div>
+            <div className="project-desktop-carousel">
+              <ImageCarousel images={ninaImages} />
+            </div>
+          </div>
         </section>
         <section className="project-section bg-color-3">
           <h2>Mes compétences</h2>

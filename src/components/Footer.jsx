@@ -52,19 +52,30 @@ function Footer({ isDarkMode }) {
       <form className="contact-form" onSubmit={handleSubmit}>
         <h2 className="form-title">Contactez-moi</h2>
         {error && <p className="form-error">{error}</p>}
-        <input
-          type="email"
-          placeholder="Votre email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="form-input"
-        />
-        <textarea
-          placeholder="Votre message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="form-textarea"
-        />
+
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Votre email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Votre email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="form-input"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message" className="form-label">Votre message</label>
+          <textarea
+            id="message"
+            placeholder="Votre message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="form-textarea"
+          />
+        </div>
+
         <button type="submit" className="form-button">
           Envoyer
         </button>

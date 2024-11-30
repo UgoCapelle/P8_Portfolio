@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Toggle from "../components/Toggle";
 import "../styles/Home.css";
+import { v4 as uuidv4 } from 'uuid';
 
 function Home({ isDarkMode, toggleDarkMode }) {
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ function Home({ isDarkMode, toggleDarkMode }) {
       </div>
       {inkDrops.map(drop => (
         <div
-          key={drop.id}
+          key={uuidv4()}
           className="ink-drop"
           style={{
             left: `${drop.x}px`,
