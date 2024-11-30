@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/P8_Portfolio/static/css/main.6ba2ec40.css",
-    "main.js": "/P8_Portfolio/static/js/main.622b11b1.js",
+    "main.css": "/P8_Portfolio/static/css/main.8d0a1ce2.css",
+    "main.js": "/P8_Portfolio/static/js/main.4f3b1cdf.js",
+    "static/media/Nina1.png": "/P8_Portfolio/static/media/Nina1.c5ec2d642e3cede4ae8e.png",
+    "static/media/Kasa1.png": "/P8_Portfolio/static/media/Kasa1.7a5feaa16960163ae521.png",
+    "static/media/Nina2.png": "/P8_Portfolio/static/media/Nina2.6a4f28589a70a25b2d20.png",
+    "static/media/Nina3.png": "/P8_Portfolio/static/media/Nina3.d42910dc2c0ec148f467.png",
+    "static/media/Kasa2.png": "/P8_Portfolio/static/media/Kasa2.cdf398af9a652ca9dc01.png",
+    "static/media/Kasa3.png": "/P8_Portfolio/static/media/Kasa3.3f5cc2af483dfe01bc57.png",
     "static/media/REACTLOGO.png": "/P8_Portfolio/static/media/REACTLOGO.8cf15fe9a546ffb69e65.png",
     "static/media/HTMLLOGO.png": "/P8_Portfolio/static/media/HTMLLOGO.433fda35ec3b24cb2a74.png",
     "static/media/CSSLOGO.png": "/P8_Portfolio/static/media/CSSLOGO.e24afc7e6530b69ac2ae.png",
     "index.html": "/P8_Portfolio/index.html",
-    "main.6ba2ec40.css.map": "/P8_Portfolio/static/css/main.6ba2ec40.css.map",
-    "main.622b11b1.js.map": "/P8_Portfolio/static/js/main.622b11b1.js.map"
+    "main.8d0a1ce2.css.map": "/P8_Portfolio/static/css/main.8d0a1ce2.css.map",
+    "main.4f3b1cdf.js.map": "/P8_Portfolio/static/js/main.4f3b1cdf.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ba2ec40.css",
-    "static/js/main.622b11b1.js"
+    "static/css/main.8d0a1ce2.css",
+    "static/js/main.4f3b1cdf.js"
   ]
 }
