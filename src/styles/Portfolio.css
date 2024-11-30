@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: clamp(16px, 1.6vw, 20px);
 }
 
 h1, h2, h3, .intro-section h2, .project-section h2 {
@@ -9,12 +10,12 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
 .portfolio {
   min-height: 100vh;
   transition: background-color 0.5s ease, color 0.5s ease;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .content {
   padding-top: 80px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .intro-section,
@@ -22,6 +23,7 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
   padding: 60px;
   width: 100%;
   transition: background-color 0.5s ease, color 0.5s ease;
+  margin: 0;
 }
 
 .intro-section {
@@ -37,27 +39,27 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
 
 .intro-section h2{
   transition: none;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .intro-section p {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
 .project-section h2 {
-  font-size: 2.5rem; 
+  font-size: clamp(1.2rem, 2vw, 1.8rem); 
 }
 
 .project-section p {
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 }
 
 .project-section h3 {
-  font-size: 2rem; 
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
 }
 
 .project-section ul li {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
 
 .bg-color-1 {
@@ -92,11 +94,19 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
 .project-section {
   color: black;
   font-size: 1.2rem;
+  position: relative; 
+  transition: transform 0.3s ease;
+  padding: 60px;
+}
+
+.project-section:hover {
+  transform: scale(1.02); 
 }
 
 .dark-mode .project-section {
   color: white;
 }
+
 
 .skills-container {
   display: flex;
@@ -107,18 +117,18 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
 }
 
 .skills-container .skill-card {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .intro-github-button {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   padding: 16px 32px;
   border-width: 3px;
 }
 
 .intro-github-button .github-icon {
-  width: 28px;
-  height: 28px;
+  width: clamp(20px, 3vw, 28px);
+  height: clamp(20px, 3vw, 28px);
   margin-left: 12px;
 }
 
@@ -126,7 +136,7 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   cursor: pointer;
   background-color: transparent;
   border: 2px solid currentColor;
@@ -142,15 +152,15 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
 }
 
 .github-icon {
-  width: 20px;
-  height: 20px;
+  width: clamp(16px, 2vw, 20px);
+  height: clamp(16px, 2vw, 20px);
   margin-left: 10px;
 }
 
 .project-link-button {
   margin-top: 20px;
   padding: 12px 24px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   cursor: pointer;
   background: none;
   border: 2px solid currentColor;
@@ -162,6 +172,12 @@ h1, h2, h3, .intro-section h2, .project-section h2 {
 .project-link-button:hover {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.project-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 800px) {

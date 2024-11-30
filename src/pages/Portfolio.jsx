@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import SkillCard from "../components/SkillCard";
 import "../styles/Portfolio.css";
+
 import htmlLogo from "../assets/HTMLLOGO.png";
 import cssLogo from "../assets/CSSLOGO.png";
 import reactLogo from "../assets/REACTLOGO.png";
 
 function Portfolio({ isDarkMode, toggleDarkMode }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       className={`portfolio ${isDarkMode ? "dark-mode" : "light-mode"}`}
       initial={{ y: "100%" }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <main className="content">
         <section className="intro-section">
-          <h2>Bienvenue sur mon portfolio !</h2>
+          <h2>Bienvenue sur mon portfolio</h2>
           <p>Jeune développeur web en fin de formation OpenClassrooms, j'ai décidé de me lancer dans l'auto-entreprenariat par motivation de la passion pour la création.</p>
         </section>
         <section className="project-section bg-color-1">
