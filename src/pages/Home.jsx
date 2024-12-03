@@ -10,6 +10,8 @@ function Home({ isDarkMode, toggleDarkMode }) {
   const [inkDrops, setInkDrops] = useState([]);
   const buttonRef = useRef(null);
 
+  const fadeOutDuration = 5; // Duration in seconds
+
   const addInkDrop = useCallback((e) => {
     if (buttonRef.current) {
       const buttonRect = buttonRef.current.getBoundingClientRect();
@@ -27,10 +29,22 @@ function Home({ isDarkMode, toggleDarkMode }) {
       x: e.clientX,
       y: e.clientY,
       size: Math.random() * 30 + 15,
-      id: Date.now(),
-      duration: Math.random() * 3 + 2
+      id: uuidv4(),
+      opacity: 0.7
     };
     setInkDrops(prevDrops => [...prevDrops, newDrop]);
+
+    setTimeout(() => {
+      setInkDrops(prevDrops => 
+        prevDrops.map(drop => 
+          drop.id === newDrop.id ? { ...drop, opacity: 0 } : drop
+        )
+      );
+    }, 100);
+
+    setTimeout(() => {
+      setInkDrops(prevDrops => prevDrops.filter(drop => drop.id !== newDrop.id));
+    }, fadeOutDuration * 1000);
   }, []);
 
   useEffect(() => {
@@ -69,7 +83,8 @@ function Home({ isDarkMode, toggleDarkMode }) {
             top: `${drop.y}px`,
             width: `${drop.size}px`,
             height: `${drop.size}px`,
-            animationDuration: `${drop.duration}s`
+            opacity: drop.opacity,
+            transition: `opacity ${fadeOutDuration}s ease-out`
           }}
         />
       ))}
